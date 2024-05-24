@@ -33,12 +33,12 @@ jobs:
         run: dotnet build --no-restore
       - name: Test
         run: dotnet test --no-build --verbosity normal
-      # - name: Publish
-      #   run: dotnet publish -c Release
-      # - uses: actions/upload-artifact@v3
-      #   with:
-      #    name: build
-      #    path: 
+      - name: Publish
+        run: dotnet publish -c Release
+      - uses: actions/upload-artifact@v3
+        with:
+         name: build
+         path: /home/runner/work/_actions/actions/setup-dotnet/v3/externals/install-dotnet.sh --channel 2.0
           
   # download-artifact:
   #   runs-on: self-hosted

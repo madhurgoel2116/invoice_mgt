@@ -46,15 +46,15 @@ jobs:
     needs: [build-dotnet-app]
     
     steps: 
-    - name: stop IIS site
-      run: |
-        iisreset /stop
+    # - name: stop IIS site
+    #   run: |
+    #     iisreset /stop
         
     - uses: actions/download-artifact@v3
       with:
         name: build
         path: D:\Invoice\netcore\wwwroot\invoice.com
         
-    - name: Start IIS Site
-      run: |
-         iisreset /start
+    # - name: Start IIS Site
+    #   run: |
+    #      iisreset /start

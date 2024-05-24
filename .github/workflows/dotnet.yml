@@ -10,7 +10,7 @@ on:
   
 jobs:
   build-dotnet-app:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     # defaults:
     #   run:
     #     working-directory: app-dotnet
@@ -34,7 +34,7 @@ jobs:
       - name: Test
         run: dotnet test --no-build --verbosity normal
       - name: Publish
-        run: dotnet publish -c Release
+        run: dotnet publish -c Release -r win-x64 --self-contained false
       - uses: actions/upload-artifact@v3
         with:
          name: build

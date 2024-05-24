@@ -55,6 +55,6 @@ jobs:
         name: build
         path: D:\Invoice\netcore\wwwroot\invoice.com
         
-  #   - name: Start IIS Site
-  #     run: |
-  #        iisreset /start
+    - name: Start IIS Site
+      run: |
+         iisreset /start

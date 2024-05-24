@@ -1,0 +1,60 @@
+name: dotnetcoreManualApproval2
+on:
+  push:
+    branches: main
+  pull_request:
+    branches: main
+    
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+  
+jobs:
+  build-dotnet-app:
+    runs-on: ubuntu-latest
+    # defaults:
+    #   run:
+    #     working-directory: app-dotnet
+    steps:
+      - uses: trstringer/manual-approval@v1
+        with:
+          secret: ${{ secrets.GITHUB_TOKEN }}
+          approvers: madhurgoel2116,madhurgoel41
+          minimum-approvals: 1
+          # issue-title: Manual approval required for workflow run 8060199949
+          # issue-Body: Workflow is pending manual review.
+      - uses: actions/checkout@v3
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 2.0.x
+      - name: Restore dependencies
+        run: dotnet restore
+      - name: Build
+        run: dotnet build --no-restore
+      - name: Test
+        run: dotnet test --no-build --verbosity normal
+      # - name: Publish
+      #   run: dotnet publish -c Release
+      # - uses: actions/upload-artifact@v3
+      #   with:
+      #    name: build
+      #    path: 
+          
+  # download-artifact:
+  #   runs-on: self-hosted
+  #   # if: ${{ always() }}
+  #   needs: [build-dotnet-app]
+    
+  #   steps: 
+  #   - name: stop IIS site
+  #     run: |
+  #       iisreset /stop
+        
+  #   - uses: actions/download-artifact@v3
+  #     with:
+  #       name: build
+  #       path: D:\app-dotnet\app-dotnet\wwwroot\gh-actions-website.com
+        
+  #   - name: Start IIS Site
+  #     run: |
+  #        iisreset /start

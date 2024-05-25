@@ -38,7 +38,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
          name: build
-         path: /home/runner/work/invoice_mgt/invoice_mgt/netcore/bin/Release/netcoreapp2.0
+         path: /home/runner/work/invoice_mgt/invoice_mgt/netcore
         
   download-artifact:
     runs-on: self-hosted

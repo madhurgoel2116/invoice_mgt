@@ -52,7 +52,7 @@ jobs:
         
     - uses: actions/download-artifact@v3
       with:
-        name: build
+        name: build.zip
         path: D:\Invoice\netcore\wwwroot\invoice.com
         
     # - name: Start IIS Site

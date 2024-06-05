@@ -59,9 +59,9 @@ jobs:
     - uses: actions/download-artifact@v3
       with:
         name: build
-        path: D:\\Invoice\\netcore\\wwwroot\\Madhur\\
+        path: D:\Invoice\netcore\wwwroot\Madhur\
     - name: unzip artifact for deployment
-      run: unzip D:\\Invoice\\netcore\\wwwroot\\Madhur\\release.zip -d D:\\Invoice\\netcore\\wwwroot\\Madhur
+      run: unzip D:\Invoice\netcore\wwwroot\Madhur\release.zip -d D:\Invoice\netcore\wwwroot\Madhur
         
     # - name: Start IIS Site
     #   run: |

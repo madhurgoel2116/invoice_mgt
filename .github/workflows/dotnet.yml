@@ -35,10 +35,16 @@ jobs:
         run: dotnet test --no-build --verbosity normal
       - name: Publish
         run: dotnet publish -c Release -r win-x64 --self-contained false
-      - uses: actions/upload-artifact@v3
+      - name: Change directory 
+        run: cd /home/runner/work/invoice_mgt/invoice_mgt/netcore
+      - name: Compress files into a ZIP
+        run:  zip /tmp/release.zip ./* -r      
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v3
         with:
          name: build
-         path: /home/runner/work/invoice_mgt/invoice_mgt/netcore
+         path: /tmp/release.zip
+         if-no-files-found: error
         
   download-artifact:
     runs-on: self-hosted
@@ -52,8 +58,10 @@ jobs:
         
     - uses: actions/download-artifact@v3
       with:
-        name: build
-        path: D:\Invoice\netcore\wwwroot\invoice.com
+        name: Release
+        path: D:\Invoice\netcore\wwwroot\Madhur
+    - name: unzip artifact for deployment
+      run: unzip D:\\Invoice\\netcore\\wwwrootMadhur\\release.zip -d D:\\Invoice\\netcore\\wwwroot\\Madhur
         
     # - name: Start IIS Site
     #   run: |

@@ -60,8 +60,9 @@ jobs:
       with:
         name: build
         path: D:\Invoice\netcore\wwwroot\Madhur\
-    - name: unzip artifact for deployment
-      run: unzip D:\Invoice\netcore\wwwroot\Madhur\release.zip -d D:\Invoice\netcore\wwwroot\Madhur
+    - name: Unzip release.zip 
+      shell: pwsh
+      run: Expand-Archive -Path D:\Invoice\netcore\wwwroot\Madhur\release.zip -DestinationPath D:\Invoice\netcore\wwwroot\Madhur -Force
         
     # - name: Start IIS Site
     #   run: |

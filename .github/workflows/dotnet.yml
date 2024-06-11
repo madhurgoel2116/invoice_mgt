@@ -64,5 +64,5 @@ jobs:
    needs: download-artifact
    steps:
     - name: deploy
-      shell: pwsh
+      shell: powershell
       run: dotnet run -Path D:\Invoice\netcore\wwwroot\Madhur\netcore

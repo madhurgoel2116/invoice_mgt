@@ -51,11 +51,7 @@ jobs:
     if: ${{ always() }}
     needs: [build-dotnet-app]
     
-    steps: 
-    # - name: stop IIS site
-    #   run: |
-    #     iisreset /stop
-        
+    steps:       
     - uses: actions/download-artifact@v3
       with:
         name: build
@@ -63,9 +59,10 @@ jobs:
     - name: Unzip release.zip 
       shell: powershell
       run: Expand-Archive -Path D:\Invoice\netcore\wwwroot\Madhur\release.zip -DestinationPath D:\Invoice\netcore\wwwroot\Madhur
-    - name: Deploy
+  deploy:
+   runs-on: self-hosted
+   needs: download-artifact
+   steps:
+    - name: deploy
       shell: cmd
-      run: dotnet run -Path D:\Invoice\netcore\wwwroot\Madhur\release.zip -DestinationPath D:\Invoice\netcore\wwwroot\Madhur\netcore
-    # - name: Start IIS Site
-    #   run: |
-    #      iisreset /start
+      run: dotnet run -Path D:\Invoice\netcore\wwwroot\Madhur\netcore

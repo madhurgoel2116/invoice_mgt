@@ -63,7 +63,9 @@ jobs:
     - name: Unzip release.zip 
       shell: powershell
       run: Expand-Archive -Path D:\Invoice\netcore\wwwroot\Madhur\release.zip -DestinationPath D:\Invoice\netcore\wwwroot\Madhur
-        
+    - name: Deploy
+      shell: cmd
+      run: dotnet run -Path D:\Invoice\netcore\wwwroot\Madhur\release.zip -DestinationPath D:\Invoice\netcore\wwwroot\Madhur\netcore
     # - name: Start IIS Site
     #   run: |
     #      iisreset /start

@@ -59,10 +59,10 @@ jobs:
     - name: Unzip release.zip 
       shell: powershell
       run: Expand-Archive -Path D:\Invoice\netcore\wwwroot\Madhur\release.zip -DestinationPath D:\Invoice\netcore\wwwroot\Madhur
-  deploy:
-   runs-on: self-hosted
-   needs: download-artifact
-   steps:
-    - name: deploy
-      shell: powershell
-      run: dotnet run -Path D:\Invoice\netcore\wwwroot\Madhur\netcore
+  # deploy:
+  #  runs-on: self-hosted
+  #  needs: download-artifact
+  #  steps:
+  #   - name: deploy
+  #     shell: powershell
+  #     run: dotnet run -Path D:\Invoice\netcore\wwwroot\Madhur\netcore

